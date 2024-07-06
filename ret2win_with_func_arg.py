@@ -3,6 +3,8 @@ from pwn import *
 context.log_level='debug'
 context.terminal = ["tmux", "splitw", "-h","-p","60"]
 
+#reference link for better understanding of pop/push instructor  -> https://www.cs.uaf.edu/2017/fall/cs301/lecture/09_08_stack.html 
+
 def find_offset(p):
     p.sendline(cyclic(500, n=8))
     p.wait()
